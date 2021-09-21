@@ -1,0 +1,1 @@
+echo "info:" $(git --version);for DIR in `find /home/$(whoami)/apps/ -type d -name ".git"`;do echo "info: found Git in directory $DIR";cd "$DIR/../";git pull origin master;echo "info: processing auto pull...";done;
